@@ -1868,23 +1868,9 @@ a.btn-border:hover {
 	display: block;
 	margin: 0 10px;
 	padding: 10px 20px;
-	background: #bbb;
+	background: #fff;
 	border: 1px solid #bbb;
 	border-radius: 10px;
-}
-.tab li.active a {
-	background :#fff;
-}
-.tab-area {
-	display: none;
-	opacity: 0;
-	padding: 0 10px;
-}
-.tab-area.is-active {
-    display: block;
-    animation-name: displayAnime;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
 }
 .tab-area img {
 	margin-bottom: 20px;
