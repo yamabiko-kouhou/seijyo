@@ -793,6 +793,7 @@ table.timetable_list td {
 	line-height: 30px;
 	padding-top: 180px;
 	width: 100%;
+	background-image: url(../img/sub_top_about.jpg);
 	background-size: 100%;
 	text-align: center;
 	font-weight: bold;
@@ -805,12 +806,9 @@ table.timetable_list td {
 	#index_top {
 		min-height: 850px;
 	}
-	#sub_top.about {
-		background-image: url(../img/sub_top_about.jpg);
-	}
 }
 @media screen and (max-width:960px) {
-	#sub_top.about {
+	#sub_top {
 		background-image: url(../img/sub_top_about_sp.jpg);
 	}
 }
