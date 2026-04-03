@@ -1575,14 +1575,15 @@ a.ap {
 
 
 /*------------------- 整形外科ページ -------------------*/
-.accordion {display: block;
+.disease-accordion {
+	display: block;
 	width: 100%;
 	margin: 0 1em 1em;
 }
-.accordion:not([open]) {
+.disease-accordion:not([open]) {
 	margin-bottom: 7px;
 }
-.accordion summary {
+.disease-accordion summary {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -1595,10 +1596,10 @@ a.ap {
 	font-size: 1.1rem;
 	cursor: pointer;
 }
-.accordion summary::-webkit-details-marker {
+.disease-accordion summary::-webkit-details-marker {
 	display: none;
 }
-.accordion summary::after {
+.disease-accordion summary::after {
 	transform: translateY(-25%) rotate(45deg);
 	width: 7px;
 	height: 7px;
@@ -1608,10 +1609,10 @@ a.ap {
 	content: '';
 	transition: transform .3s;
 }
-.accordion[open] summary::after {
+.disease-accordion[open] summary::after {
 	transform: rotate(225deg);
 }
-.accordion .accordion-list {
+.disease-accordion .accordion-list {
 	transform: translateY(-10px);
 	margin: 0;
 	padding: 2em 2em 1em 2em;
@@ -1625,7 +1626,7 @@ a.ap {
 	transform: none;
 	opacity: 1;
 }
-.accordion .accordion-list .accordion-list-child {
+.disease-accordion .accordion-list .accordion-list-child {
 	padding: 10px;
 	background: #fff;
 	border: 1px solid #bbb;
@@ -1636,11 +1637,11 @@ a.ap {
 	text-decoration: none;
 	transition: .3s;
 }
-.accordion .accordion-list .accordion-list-child:hover {
+.disease-accordion .accordion-list .accordion-list-child:hover {
 	box-shadow: none;
 }
 @media screen and (max-width:640px) {
-	.accordion .accordion-list {
+	.disease-accordion .accordion-list {
 		grid-template-columns: repeat(1, 1fr);
 	}
 }
