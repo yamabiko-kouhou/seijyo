@@ -97,6 +97,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="hero"><!-- ヒーロー画像 -->
   <ul class="slider">
 	<li><picture><source srcset="img/top-sp01.jpg" media="(max-width:450px)"><img src="img/top01.jpg" alt="成城整形外科リウマチ科 診療風景"></picture></li>
+	<li><picture><source srcset="img/top-sp04.jpg" media="(max-width:450px)"><img src="img/top04.jpg" alt="成城整形外科リウマチ科 MRI"></picture></li>
 	<li><picture><source srcset="img/top-sp02.jpg" media="(max-width:450px)"><img src="img/top02.jpg" alt="成城整形外科リウマチ科 リハビリ室"></picture></li>
 	<li><picture><source srcset="img/top-sp03.jpg" media="(max-width:450px)"><img src="img/top03.jpg" alt="成城整形外科リウマチ科 外観"></picture></li>
   </ul>
@@ -136,10 +137,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<td>－</td>
 	  </tr>
   </table>
-  <div>
-	<p>※最終受付 18:15&nbsp;&nbsp;&nbsp;※土曜午後、日曜、祝日 休診</p>
-	<a href="first-visit.html" class="link-btn"><i class="icon-beginner mono"></i>&nbsp;初診の方へ</a>
-  </div>
+  <p>※最終受付 18:15&nbsp;&nbsp;&nbsp;※土曜午後、日曜、祝日 休診</p>
 </div>
 	
 <div class="bottom_btn3"><!-- スマホ用下部固定メニューボタン -->
@@ -151,21 +149,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 	
 <div id="main"><!-- メイン画面 -->
-  <div class="main-container">
-    <section>
+ <!-- <div class="main-container">-->
+	<section><div class="section-inner">
+	  <div class="index-btn">
+		<a href="about.html" class="link-btn"><i class="fa-solid fa-hospital"></i>&nbsp;当院について</a>
+		<a href="first-visit.html" class="link-btn"><i class="icon-beginner mono"></i>&nbsp;初診の方へ</a>
+		<a href="first-visit.html" class="link-btn"><i class="fa-solid fa-stethoscope"></i>&nbsp;診療科目</a>
+		<a href="about.html#doctor" class="link-btn"><i class="fa-solid fa-user-doctor"></i>&nbsp;医師紹介</a>
+	  </div>
+	</div></section>
+	  
+    <section class="bg"><div class="section-inner">
 	  <div class="about-container">
 		<div>
 		  <h2 class="title"><span class="en">About</span><span class="jp">当院について</span></h2>
-		  <img src="img/about_img-sp.jpg" alt="" class="about-img-sp">
-		  <p>成城整形外科リウマチ科は、骨や筋肉、関節などの「痛み」と「しびれ」に対する専門医療機関です。<br>通勤・通学で成城学園前駅をご利用の方、お近くにお住まいの方、お身体のお悩みをお聞かせください。</p>
+		  <div class="swiper about-img-sp">
+			<div class="swiper-wrapper">
+		  	  <div class="swiper-slide">
+				<img src="img/img1.jpg" alt="">
+				<div class="caption">充実のリハビリ器具を備えたリハビリ室</div>
+		  	  </div>
+		  	  <div class="swiper-slide">
+				<img src="img/img2.jpg" alt="">
+				<div class="caption">MRI完備で精密な検査が可能</div>
+		  	  </div>
+		  	  <div class="swiper-slide">
+				<img src="img/img10.jpg" alt="">
+				<div class="caption">CT完備で迅速な検査対応</div>
+		  	  </div>
+		  	  <div class="swiper-slide">
+				<img src="img/img8.jpg" alt="">
+				<div class="caption">広々とした待合室</div>
+		  	  </div>
+		  	  <div class="swiper-slide">
+				<img src="img/img4.jpg" alt="">
+				<div class="caption">成城学園前駅から徒歩1分でアクセス抜群</div>
+		  	  </div>
+		  	  <div class="swiper-slide">
+				<img src="img/img5.jpg" alt="">
+				<div class="caption">整形外科医が丁寧に診察</div>
+		  	  </div>
+		    </div>
+		<div class="swiper-pagination"></div><!--ページネーション-->
+		<div class="swiper-button-prev"></div><!--矢印-->
+		<div class="swiper-button-next"></div><!--矢印-->
+	  </div>
+		  <p>成城整形外科リウマチ科は、「まずは原因を知ること」を大切にしています。<br><br>痛みや不調には必ず理由があります。<br>その理由を丁寧に探し、患者様が安心して治療に進めるよう、画像診断を中心とした医療を行っています。<br><br>小さな不安や疑問も気軽にご相談いただける、地域の皆さまにとって長く安心して通える場所を目指しています。</p>
 		  <a href="about.html" class="link-btn" style="margin-top: 50px;"><i class="fa-solid fa-hospital"></i>&nbsp;当院について</a>
 		</div>
 		<img src="img/about_img-pc.png" alt="" class="about-img-pc">
 	  </div>
-	</section>
+	</div></section>
 	  
 	  
-	<section>
+	<section class="bg-photo"><div class="section-inner">
+	  <h2 class="title"><span class="en">Features</span><span class="jp">当院の特徴</span></h2>
+	  <ul class="features-container">
+	  	<li><div class="main"><span>MRI・CT検査が</span><span>可能</span></div><div class="sub">当院内で検査ができるため、原因を早く・正確に把握</div></li>
+		<li><div class="main"><span>専門医が丁寧に</span><span>診断・説明</span></div><div class="sub">よく分からないまま進む治療にならないよう、丁寧な説明を徹底</div></li>
+		<li><div class="main"><span>患者様に寄り</span><span>添った治療方針</span></div><div class="sub">症状や生活スタイルに合わせて、無理のない治療をご提案</div></li>
+		<li><div class="main"><span>リハビリとの</span><span>連携</span></div><div class="sub">理学療法士・柔道整復師が、痛みの改善から再発予防までサポート</div></li>
+	  </ul>
+	</div></section>
+	  
+	  
+	<section class="bg"><div class="section-inner">
 	  <h2 class="title"><span class="en">Department</span><span class="jp">診療科目</span></h2>
 	  <ul class="department-container">
 	  	<li><a href="orthopedics.html"><img src="img/top_orthopedics.png" alt=""><span>整形外科</span></a></li>
@@ -175,11 +223,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<li><a href="vaccination.html"><img src="img/top_vaccination.png" alt=""><span>予防接種</span></a></li>
 		<li><a href="osteoporosis.html"><img src="img/top_osteoporosis.png" alt=""><span>骨粗しょう症外来</span></a></li>
 	  </ul>
-	  <a href="mri-ct.html#section03"><img src="img/dwibs-banner.jpg" alt="MRIを使った全身がん検査。詳しくはこちら" class="img-center banner1"></a>
-	</section>
+	  <a href="dwibs.html"><img src="img/dwibs-banner.jpg" alt="MRIを使った全身がん検査。詳しくはこちら" class="img-center banner1"></a>
+	</div></section>
 	  
 	  
-	<section class="news-container">
+	<section><div class="section-inner">
+	  <h2 class="title"><span class="en">Doctor</span><span class="jp">医師紹介</span></h2>
+	  <div class="img_right">
+	  <img src="img/dr-inagaki.jpg" alt="成城整形外科リウマチ科院長">
+    </div>
+    <p>院長の稲垣隆太と申します。<br>当院は「痛みの原因を正確に知ること」を大切にしています。<br>そのために、MRI・CT・エコーなどの画像診断を院内に備え、症状の背景を丁寧に見極める診療を行っています。<br>これまで大学病院や地域病院で、人工膝関節・人工股関節の手術をはじめ、幅広い整形外科診療に携わってきました。<br>その経験を通じて、「正確な診断が、最適な治療につながる」ことを強く実感してきました。<br>痛みの理由が分からないまま治療が進むと、不安はなかなか消えません。<br>当院では、画像を一緒に確認しながら、分かりやすく丁寧に説明し、患者様が納得して治療に進めるよう心がけています。<br>どんな些細なことでも、どうぞお気軽にご相談ください。<br>皆さまの健康と安心のために、全力でサポートいたします。 
+    </p>
+	  <a href="about.html#doctor" class="link-btn" style="margin-top: 50px;"><i class="fa-solid fa-user-doctor"></i>&nbsp;医師紹介</a>
+	</div></section>
+	  
+	  
+	<section class="bg"><div class="section-inner">
 	  <h2 class="title"><span class="en">News</span><span class="jp">お知らせ</span></h2>
 	  <ul class="ul_news">
 	  <li>
@@ -199,14 +258,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div class="ul_news_main"><a href="access.html#car">【お車でお越しの方へ】近隣の駐車場と提携しております。</a></div>
 	  </li>
 	</ul>
-	</section>
+	</div></section>
 	  
 	  
-	<section>
+	<section><div class="section-inner">
 	  <a href="https://yamabiko-group.or.jp/" target="_blank"><img src="img/yamabiko-banner.jpg" alt="医療法人社団やまびこの詳細はこちら" class="img-center banner1"></a>
-	</section>
+	</div></section>
 	  
-  </div>
+  <!--</div>-->
 </div>
 	
 
