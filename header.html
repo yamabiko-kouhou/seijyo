@@ -2,35 +2,36 @@
 
 <script>
 // ハンバーガーメニュー
-(function($) {
-  var $body = $('body'); 
-  var $btn  = $('#nav-btn');
-  var $nav  = $('#header-nav');
-  var open  = 'open';
+$(window).on("load", function() {
 
-  // ハンバーガークリック
-  $btn.on('click', function(e) {
-    e.stopPropagation(); // ← 外クリックと干渉防止
+  // ハンバーガーメニュー開閉
+  $(document).on('click', "#nav-btn", function(e) {
+    e.stopPropagation();
 
-    $body.toggleClass(open);
-    $btn.toggleClass('active');
+    $("body").toggleClass("open");
+    $(this).toggleClass("active");
   });
-  // メニュー内クリックは閉じない
-  $nav.on('click', function(e) {
+
+  // メニュー内クリックでは閉じない
+  $(document).on('click', "#header-nav", function(e) {
     e.stopPropagation();
   });
+
   // メニュー外クリックで閉じる
   $(document).on('click', function() {
-    $body.removeClass(open);
-    $btn.removeClass('active');
+    $("body").removeClass("open");
+    $("#nav-btn").removeClass("active");
   });
-  // アコーディオン
-  $('.accordion').on('click', function() {
+
+  // アコーディオン開閉
+  $(document).on('click', '.accordion', function(e) {
+    e.stopPropagation();
+
     $(this).toggleClass('active');
     $(this).next('.submenu').slideToggle();
   });
 
-})(jQuery);
+});
 	
 	
 //ヘッダーの文の大きさ調整
