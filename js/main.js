@@ -6,7 +6,35 @@ fetch("header.html")
 
 
 // ハンバーガーメニュー
+(function($) {
+  var $body = $('body'); 
+  var $btn  = $('#nav-btn');
+  var $nav  = $('#header-nav');
+  var open  = 'open';
 
+  // ハンバーガークリック
+  $btn.on('click', function(e) {
+    e.stopPropagation(); // ← 外クリックと干渉防止
+
+    $body.toggleClass(open);
+    $btn.toggleClass('active');
+  });
+  // メニュー内クリックは閉じない
+  $nav.on('click', function(e) {
+    e.stopPropagation();
+  });
+  // メニュー外クリックで閉じる
+  $(document).on('click', function() {
+    $body.removeClass(open);
+    $btn.removeClass('active');
+  });
+  // アコーディオン
+  $('.accordion').on('click', function() {
+    $(this).toggleClass('active');
+    $(this).next('.submenu').slideToggle();
+  });
+
+})(jQuery);
 
 
 
@@ -27,7 +55,38 @@ $(function() {
 
 
 //ヘッダーの文の大きさ調整
+function fitText(el) {
+  const maxWidth = el.clientWidth;
 
+  let min = 10;
+  let max = 300;
+
+  el.style.whiteSpace = 'nowrap';
+
+  while (max - min > 1) {
+    let mid = Math.floor((min + max) / 2);
+    el.style.fontSize = mid + 'px';
+
+    if (el.scrollWidth > maxWidth) {
+      max = mid;
+    } else {
+      min = mid;
+    }
+  }
+  el.style.fontSize = min + 'px';
+}
+
+function init() {
+  const el = document.querySelector('.hero p');
+
+  if (window.innerWidth >= 768) {
+    fitText(el);
+  } else {
+    el.style.fontSize = '';
+  }
+}
+window.addEventListener('load', init);
+window.addEventListener('resize', init);
 
 
 
