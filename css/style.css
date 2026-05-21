@@ -757,6 +757,8 @@ table.timetable_list td {
 
 /* 診療科目 */
 .department-container {
+	width: 80%;
+	margin: 0 auto;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-row-gap: 30px;
@@ -797,6 +799,7 @@ table.timetable_list td {
 }
 @media screen and (max-width:787px) {
 	.department-container {
+		width: 100%;
 		grid-column-gap: 10px;
 	}
 	.department-container li {
