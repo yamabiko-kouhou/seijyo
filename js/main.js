@@ -1,9 +1,3 @@
-// ヘッダーの読み込み
-fetch("header.html")
-  .then((response) => response.text())
-  .then((data) => document.querySelector("#header").innerHTML = data);
-
-
 
 // ハンバーガーメニュー
 (function($) {
@@ -54,7 +48,7 @@ $(function() {
 
 
 
-//ヘッダーの文の大きさ調整
+//ヒーロー画像の文の大きさ調整
 function fitText(el) {
   const maxWidth = el.clientWidth;
 
