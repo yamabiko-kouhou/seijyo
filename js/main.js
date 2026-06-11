@@ -113,9 +113,17 @@ const swiper = new Swiper('.swiper', {
 
 
 // スクロールした時ふわっと出現するエフェクト
-$('.effect').on('inview', function() {
-	 var $item = $(this);
-	 $item.addClass('start');
+$(function() {
+  $(window).scroll(function() {
+    $(".scroll-anime").each(function() {
+      let scroll = $(window).scrollTop();
+      let blockPosition = $(this).offset().top;
+      let windowHeihgt = $(window).height();
+      if (scroll > blockPosition - windowHeihgt + 250) {
+        $(this).addClass("blockIn");
+      }
+    });
+  });
 });
 
 
