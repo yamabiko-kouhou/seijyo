@@ -414,7 +414,7 @@ section.bg {
 	margin-left: 20px;
 	font-size: 1.5rem;
 	color: var(--main-color);
-	letter-spacing: .3em;
+	letter-spacing: .1em;
 }
 
 /* ボタン */
@@ -520,20 +520,17 @@ section.bg {
 	object-fit: cover;
 	object-position: center top;
 }
-.hero div {
+.hero p {
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	width: 53%;
-	padding: 0 0 20px 5px;
+	width: 52%;
+	padding: 0 0 20px 20px;
 	color: #152347;
 	text-shadow: 0 0 8px #fff,0 0 8px #fff,0 0 8px #fff;
 	white-space: nowrap;
-	line-height: 1.5;
+	line-height: 1;
 	font-weight: bold;
-}
-.hero-title {
-	margin-bottom: 10px;
 }
 @media screen and (max-width:1113px) {
 	.hero {
@@ -545,14 +542,8 @@ section.bg {
 		width: 95%;
 		height: 60vh;/*スマホ用下部固定メニューボタンの高さ分の余白*/
 	}
-	.hero div {
-		width: auto;
-		padding: 0 0 5px 5px;
-		font-size: .8rem;
-		white-space: normal;
-	}
-	.hero-title {
-		font-size: 1rem;
+	.hero p {
+		display: none;
 	}
 }
 
