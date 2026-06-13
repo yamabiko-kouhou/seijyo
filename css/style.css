@@ -106,6 +106,12 @@ h1 img {
 	background: #fff;
 }
 @media screen and (max-width:1113px) {
+	header {
+		background: none;
+	}
+	.header-inner {
+		padding:  0 2.5%;
+	}
 	#header-nav-pc {
 		display: none;
 	}
@@ -505,7 +511,7 @@ section.bg {
 .hero {
 	position: relative;
 	margin: 0 auto;
-	width: 96%;
+	width: 97%;
 	height: 100vh;
 	overflow: hidden;
 }
@@ -520,30 +526,57 @@ section.bg {
 	object-fit: cover;
 	object-position: center top;
 }
-.hero p {
+.hero div {
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	width: 52%;
-	padding: 0 0 20px 20px;
+	width: 53%;
+	padding-bottom: 30px;
 	color: #152347;
-	text-shadow: 0 0 8px #fff,0 0 8px #fff,0 0 8px #fff;
-	white-space: nowrap;
-	line-height: 1;
+	text-shadow: 0 0 7px #fff,0 0 7px #fff,0 0 7px #fff;
+	line-height: 1.5;
 	font-weight: bold;
+}
+.hero .hero-title {
+	margin-bottom: 20px;
+	white-space: nowrap;
+}
+.hero .hero-text {
+	font-size: 1.3rem;
+}
+.hero .hero-text span {
+	display: inline-block;
 }
 @media screen and (max-width:1113px) {
 	.hero {
 		height: 50vh;
 	}
+	.hero .hero-text {
+		font-weight: normal;
+	}
 }
 @media screen and (max-width:787px) {
 	.hero {
 		width: 95%;
-		height: 60vh;/*スマホ用下部固定メニューボタンの高さ分の余白*/
+		height: 70vh;
 	}
-	.hero p {
-		display: none;
+	.hero div {
+		width: 85%;
+		padding-bottom: 0;
+		background: #f2f5f7;
+		text-shadow: none;
+	}
+	.hero .hero-title {
+		margin-bottom: 10px;
+		font-size: 1.2rem;
+		line-height: 1.2;
+		white-space: normal;
+	}
+	.hero .hero-text {
+		font-size: .8rem;
+	}
+	.hero .hero-text span {
+		display: inline;
 	}
 }
 
@@ -594,7 +627,6 @@ table.timetable_list td {
 	}
 	table.timetable_list {
 		width: 100%;
-		margin: 10px auto;
 	}
 	table.timetable_list th,
 	table.timetable_list td {
@@ -616,7 +648,15 @@ table.timetable_list td {
 }
 @media screen and (max-width:767px) {
 	.timetable {
-		margin: 10px auto 30px;
+		margin: 15px auto 30px;
+		padding: 10px 10px 5px;
+	}
+	table.timetable_list th,
+	table.timetable_list td {
+		padding: 0 10px;
+	}
+	.timetable p {
+		font-size: .8rem;
 	}
 }
 
