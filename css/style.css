@@ -112,6 +112,10 @@ h1 img {
 	.header-inner {
 		padding:  0 2.5%;
 	}
+	h1 img {
+		padding: 3px 7px;
+		background: #f2f5f7;
+	}
 	#header-nav-pc {
 		display: none;
 	}
@@ -259,6 +263,41 @@ h1 img {
 		padding: 5px 3px;
 		width: 100%;
 		background: #d26c2b;
+		color: #fff;
+		font-size: .9rem;
+		line-height: 1.2;
+		text-align: center;
+		white-space: nowrap;
+	}
+	.bottom_btn4 li:nth-child(odd) {
+		background: #fff;
+		color: #d26c2b;
+	}
+	.bottom_btn4 li a {
+		display: block;
+		width: 100%;
+		padding: 10px;
+		box-sizing: border-box;
+		text-align: center;
+	}
+}
+/*@media screen and (max-width:640px) {
+	.bottom_btn4 {
+		display: block;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		height: 68px;
+		z-index: 100;
+	}
+	.bottom_btn4 ul {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.bottom_btn4 li {
+		padding: 5px 3px;
+		width: 100%;
+		background: #d26c2b;
 		font-size: .9rem;
 		line-height: 1.2;
 		text-align: center;
@@ -275,7 +314,7 @@ h1 img {
 		color: #fff;
 		text-align: center;
 	}
-}
+}*/
 
 
 /*------------------- フッター -------------------*/
@@ -561,8 +600,9 @@ section.bg {
 		height: 70vh;
 	}
 	.hero div {
-		width: 85%;
+		width: 100%;
 		padding-bottom: 0;
+		padding-top: 7px;
 		background: #f2f5f7;
 		text-shadow: none;
 	}
@@ -571,6 +611,9 @@ section.bg {
 		font-size: 1.2rem;
 		line-height: 1.2;
 		white-space: normal;
+	}
+	.hero .hero-title span {
+		display: inline-block;
 	}
 	.hero .hero-text {
 		font-size: .8rem;
@@ -814,64 +857,6 @@ table.timetable_list td {
 	}
 }
 
-/* 診療科目 */
-.department-container {
-	width: 80%;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-row-gap: 30px;
-	grid-column-gap: 40px;
-}
-.department-container li {
-	aspect-ratio: 1 / 1;
-	padding: 20px 10px;
-	border-radius: 10px;
-	font-size: 1.4rem;
-	text-align: center;
-	transition: .3s;
-}
-.department-container li:nth-child(odd) {
-	background: var(--main-color);
-	color: #fff;
-}
-.department-container li:nth-child(even) {
-	background: #fff;
-	border: 1px solid var(--main-color);
-	color: var(--main-color);
-}
-.department-container li a {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
-}
-.department-container li img {
-	width: 80%;
-	height: auto;
-	margin-bottom: 15px;
-}
-.department-container li:hover {
-	opacity: .5;
-}
-@media screen and (max-width:787px) {
-	.department-container {
-		width: 100%;
-		grid-column-gap: 10px;
-	}
-	.department-container li {
-		padding: 3px;
-		font-size: .9rem;
-		line-height: 1;
-	}
-	.department-container li img {
-		width: 65%;
-		margin-bottom: 5px;
-	}
-}
-
 /* ニュース */
 .news-container {
 	padding: 20px;
@@ -1047,13 +1032,9 @@ table.timetable_list td {
 .content h3 {
 	font-size: 24px;
 	line-height: 30px;
-	margin-bottom: 10px;
 	position: relative;
-	margin-top: 30px;
-	padding-top: 15px;
-	padding-right: 10px;
-	padding-bottom: 15px;
-	padding-left: 44px;
+	margin: 30px 0 10px;
+	padding: 15px 10px 15px 44px;
 	font-weight: normal;
 	color: #2E94AD;
 	clear: both;
@@ -1823,6 +1804,102 @@ a.ap {
 @media screen and (max-width:640px) {
 	.disease-accordion .accordion-list {
 		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+
+
+/*------------------- リハビリページ -------------------*/
+.reha-flex {
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+}
+.reha-flex-even {
+	flex-direction: row-reverse;
+}
+.reha-flex h3.heading {
+	margin: 10px 0;
+	padding: 15px 10px 15px 44px;
+    position: relative;
+	color: #333;
+}
+.reha-flex h3.heading::before {
+    position: absolute;
+	content: attr(data-number);
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    color: rgba(46, 148, 173, .3);
+    font-size: 3em;
+	letter-spacing: -0.1em;
+    line-height: 1;
+    pointer-events: none;
+}
+.content .reha-flex h3.heading::after {
+	display: none;
+}
+.reha-flex img {
+	width: 40%;
+	margin-left: 20px;
+}
+.reha-flex-even img {
+	margin-left: 0;
+	margin-right: 20px;
+}
+.department-container {
+	width: 90%;
+	margin: 0 auto 60px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-row-gap: 30px;
+	grid-column-gap: 30px;
+}
+.department-container li {
+	padding: 15px 20px;
+	background: #fff;
+	border: 1px solid var(--main-color);
+	border-radius: 10px;
+	color: var(--main-color);
+	text-align: center;
+}
+.department-container li img {
+	width: 65%;
+	height: auto;
+	margin-bottom: 10px;
+}
+.department-container li span {
+	display: block;
+}
+@media screen and (max-width:767px) {
+	.reha-flex {
+		margin-bottom: 20px;
+		flex-direction: column;
+	}
+	.reha-flex-even {
+		flex-direction: column;
+	}
+	.reha-flex img {
+		width: 100%;
+		margin-left: 0;
+	}
+	.reha-flex-even img {
+		margin-right: 0;
+	}
+	.department-container {
+		width: 100%;
+		grid-template-columns: repeat(3, 1fr);
+		grid-row-gap: 15px;
+		grid-column-gap: 10px;
+	}
+	.department-container li {
+		padding: 3px 5px;
+		font-size: .9rem;
+		line-height: 1;
+	}
+	.department-container li img {
+		width: 50%;
+		margin-bottom: 5px;
 	}
 }
 
