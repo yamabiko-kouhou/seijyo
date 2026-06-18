@@ -178,7 +178,7 @@ h1 img {
 	top: 0;
 	right: -100%;
 	width: 100%;
-	max-width: 430px;
+	max-width: 450px;
 	height: 100vh;
 	background: #fff;
 	transition: .4s;
@@ -188,39 +188,52 @@ h1 img {
 .open #header-nav {
 	right: 0;
 }
-#header-nav img {
+#sp-nav {
+	height: 100vh;
+	overflow-y: scroll;
+}
+#sp-nav img {
 	width: 50%;
 	margin: 20px 20px 0;
 }
 .menu {
 	list-style: none;
-	margin-top: 40px;
+	width: 90%;
+	margin: 30px auto 0;
 	padding: 0;
 }
 .menu li {
-	padding: 5px 15px;
+	padding: 13px 15px;
 	border-bottom: 1px solid #ccc;
+	font-size: 1.1rem;
+	font-weight: bold;
 }
 .menu li a {
 	display: block;
+	transition: .3s;
+}
+.menu li a:hover {
+	opacity: .5;
 }
 .accordion {
 	width: 100%;
-	padding: 5px 0;
+	padding: 6px 0;
 	background: none;
 	border: none;
-	font-size: 16px;
+	font-size: 1.1rem;
+	font-weight: bold;
 	text-align: left;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	cursor: pointer;
 }
 .accordion .arrow {
 	width: 10px;
 	height: 10px;
 	display: inline-block;
-	border-bottom: 2px solid #bbb;
-	border-left: 2px solid #bbb;
+	border-bottom: 2px solid #777;
+	border-left: 2px solid #777;
 	transform: rotate(-45deg);
 	transition: transform .3s;
 }
@@ -229,16 +242,26 @@ h1 img {
 }
 .submenu {
 	display: none;
-	padding-left: 20px;
+	padding: 0 20px;
 }
 .submenu li {
-	padding: 10px 0;
-}
-.submenu li:last-child {
+	padding:  5px 10px;
+	font-weight: normal;
 	border-bottom: none;
 }
 .submenu.open {
 	display: block;
+}
+.menu div {
+	margin-top: 10px;
+	border-bottom: 1px solid #ccc;
+}
+.menu div li {
+	padding: 1px 15px 10px;
+	border-bottom: none;
+	color: #777;
+	font-size: .9rem;
+	font-weight: normal;
 }
 
 
@@ -812,6 +835,10 @@ table.timetable_list td {
 	text-align: center;
 }
 @media screen and (max-width:767px)  {
+	.bg-photo {
+		background-size: cover;
+		background-position: center center;
+	}
 	.features-container {
 		grid-template-columns: repeat(1, 1fr);
 	}
@@ -1504,7 +1531,8 @@ a.ap {
 	}
 }
 
-.table_design09 {
+/* 外来表 */
+.doctor-table-pc {
 	width: 95%;
 	margin: 0 auto 50px;
 	border-collapse: collapse;
@@ -1512,68 +1540,56 @@ a.ap {
 	overflow: hidden;
 	text-align: center;
 }
-.table_design09 tr {
+.doctor-table-pc tr {
 	background-color: #fff;
 	border-bottom: 1px solid var(--main-color);
 }
-.table_design09 th, .table_design09 td {
+.doctor-table-pc th, .doctor-table-pc td {
 	padding: 1em;
 }
-.table_design09 thead th {
+.doctor-table-pc thead th {
 	background-color: var(--main-color);
 	color: #fff;
 	font-weight: bold;
 	text-align: center;
 }
-.table_design09 tbody th {
+.doctor-table-pc tbody th {
 	color: var(--main-color);
 	text-align: center;
 }
-.table_design09_light tr {
-	border-bottom: 1px solid var(--main-color);
-}
-.table_design09_light thead th {
-	background-color: var(--main-color);
-}
-.table_design09_light tbody th {
-	color: var(--main-color);
+.doctor-table-sp {
+	display: none;
 }
 @media screen and (max-width: 787px) {
-	.table_design09 {
-		width: 90%;
-		border-radius: 0;
-		text-align: left;
-	}
-	.table_design09 thead {
+	.doctor-table-pc {
 		display: none;
 	}
-	.table_design09 th,
-	.table_design09 td {
+	.doctor-table-sp {
 		display: block;
-		border: 0;
-		border-bottom: 1px solid var(--main-color);
+		width: 100%;
+		margin: 0 auto 50px;
+		border-collapse: collapse;
+		table-layout: fixed;
+		text-align: center;
 	}
-	.table_design09 tbody th {
+	.doctor-table-sp th,
+	.doctor-table-sp td {
+		padding: 20px;
+		background: #fff;
+		border: 1px solid var(--main-color);
+	}
+	.doctor-table-sp thead th {
 		background: var(--main-color);
 		color: #fff;
-	}
-	.table_design09 td {
-		display: flex;
-		align-items: center;
-		text-align: left;
-	}
-	.table_design09 td::before {
-		content: attr(date-label);
-		background-color: var(--main-color);
-		color: #fff;
 		font-weight: bold;
-		display: inline-block;
-		width: 20%;
-		min-width: 4em;
-		text-align: center;
-		margin-right: 10%;
-		padding: 4px;
-		border-radius: 100vh;
+	}
+	.doctor-table-sp thead th:not(:last-child) {
+		border-right: 1px solid #fff;
+	}
+	.doctor-table-sp tbody th {
+		//width: 80px;
+		color: var(--main-color);
+		font-weight: bold;
 	}
 }
 
