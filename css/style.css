@@ -199,7 +199,7 @@ h1 img {
 .menu {
 	list-style: none;
 	width: 90%;
-	margin: 30px auto 70px;
+	margin: 30px auto 80px;/*スマホ表示時に下部固定メニューに重ならないようmargin-ttomを設定*/
 	padding: 0;
 }
 .menu li {
@@ -997,14 +997,14 @@ table.timetable_list td {
 
 /********************* サブページ *********************/
 .content h2 {
+	margin: 30px 0 20px;
+	padding: 30px 10;
+	border-bottom: 1px dotted #15394A;
 	font-size: 28px;
 	line-height: 2.2;
-	margin-bottom: 20px;
-	border-bottom: 1px dotted #15394A;
 	font-weight: normal;
 	letter-spacing: 1px;
 	text-align: center;
-	padding: 30px 10;
 	clear: both;
 }
 .content h2 i {
@@ -1917,6 +1917,9 @@ a.ap {
 
 
 /*------------------- リハビリページ -------------------*/
+.reha-img {
+	width: 50%;
+}
 .reha-flex {
 	margin-bottom: 20px;
 	display: flex;
@@ -1979,6 +1982,9 @@ a.ap {
 	display: block;
 }
 @media screen and (max-width:767px) {
+	.reha-img {
+		width: 100%;
+	}
 	.reha-flex {
 		margin-bottom: 20px;
 		flex-direction: column;
@@ -2158,6 +2164,9 @@ a.ap {
 	opacity: .5;
 }
 @media screen and (max-width: 480px) {
+	.shita {
+		flex-direction: column;
+	}
 	.yobou-yoyaku-btn {
 		width: 95%;
 	}
