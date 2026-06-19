@@ -1052,7 +1052,7 @@ table.timetable_list td {
 
 .content h4 {
 	display: block;
-	margin: 20px 0 0;
+	margin: 20px 0 10px;
 	padding: 10px 10px 0;
 	font-size: 20px;
 	letter-spacing: 0.1em;
@@ -1677,6 +1677,127 @@ a.ap {
 		margin-bottom: 15px;
 	}
 }
+
+
+
+/*------------------- 症状から探すページ -------------------*/
+.symptoms-container {
+	width: 70%;
+	margin: 0 auto 20px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-row-gap: 30px;
+	grid-column-gap: 30px;
+}
+.symptoms-container li {
+	padding: 15px 20px;
+	background: #fff;
+	border: 1px solid var(--main-color);
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px #bbb;
+	color: var(--main-color);
+	text-align: center;
+	transition: .3s;
+}
+.symptoms-container li:hover {
+	box-shadow: none;
+}
+.symptoms-container li a {
+	display: block;
+}
+.symptoms-container li img {
+	width: 65%;
+	height: auto;
+	margin-bottom: 10px;
+}
+.symptoms-container li span {
+	display: block;
+}
+
+.worry_heading {
+    position: relative;
+	margin: 50px auto 20px;
+	padding: 45px 20px 20px;
+    background: var(--main-color);
+    border-radius: 6px;
+    text-align: center;
+}
+.worry_heading h3 {
+	margin: 7px auto 15px;
+	padding: 0;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+	line-height: 1;
+}
+.content .worry_heading h3::after {
+	display: none;
+}
+.worry_icons {
+    position: absolute;
+    top: -38px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.worry_icon {
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border: 2px solid #00548c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.worry_icons .worry_icon {
+    position: static;
+}
+.worry_icon img {
+    width: 48px;
+    height: auto;
+}
+.symptoms-list {
+	padding: 10px 20px;
+	background: #fff;
+	border-radius: 10px;
+}
+.symptoms-list ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+.symptoms-list ul li i {
+	color: #15394A;
+}
+
+.disease-list {
+	text-decoration: underline;
+	color: #0099CC;
+}
+@media screen and (max-width:767px) {
+	.symptoms-container {
+		width: 100%;
+		grid-template-columns: repeat(2, 1fr);
+		grid-row-gap: 15px;
+		grid-column-gap: 10px;
+	}
+	.symptoms-container li {
+		padding: 3px 5px;
+		font-size: .9rem;
+		line-height: 1;
+	}
+	.symptoms-container li img {
+		width: 50%;
+		margin-bottom: 5px;
+	}
+	.symptoms-list ul {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 7px;
+	}
+}
+
 
 
 
