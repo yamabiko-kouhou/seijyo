@@ -134,7 +134,7 @@ h1 img {
 @media screen and (max-width:1114px) {
 	#nav-btn {
 		width: 80px;
-		margin-top: calc(10px + env(safe-area-inset-top));
+		margin-top: calc(7px + env(safe-area-inset-top));
 	}
 }
 #nav-btn span {
