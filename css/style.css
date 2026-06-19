@@ -1044,11 +1044,6 @@ table.timetable_list td {
 	background-color: #82CCD5;
 	content: '';
 }
-.content h3 span {
-	font-size: 15px;
-	color: #555;
-	padding-left: 15px;
-}
 
 .content h4 {
 	display: block;
@@ -1723,15 +1718,18 @@ a.ap {
     text-align: center;
 }
 .worry_heading h3 {
-	margin: 7px auto 15px;
+	margin: 5px auto 18px;
 	padding: 0;
     color: #fff;
     font-size: 1.6rem;
     font-weight: bold;
-	line-height: 1;
+	line-height: 1.2;
 }
 .content .worry_heading h3::after {
 	display: none;
+}
+.worry_heading h3 span {
+	display: inline-block;
 }
 .worry_icons {
     position: absolute;
@@ -1795,6 +1793,11 @@ a.ap {
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 7px;
+		text-align: left;
+	}
+	.worry_heading h3 {
+		font-size: 1.4rem;
+		line-height: 1.1;
 	}
 }
 
