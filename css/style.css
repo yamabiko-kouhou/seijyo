@@ -110,10 +110,10 @@ h1 img {
 		background: none;
 	}
 	.header-inner {
-		padding:  0 2.5%;
+		padding:  0 2.5% 0 0;
 	}
 	h1 img {
-		padding: 3px 7px;
+		padding: 3px 7px 2px;
 		background: #f2f5f7;
 	}
 	#header-nav-pc {
@@ -274,6 +274,7 @@ h1 img {
 		display: block;
 		position: fixed;
 		bottom: 0;
+		margin: 0;
 		width: 100%;
 		height: 68px;
 		z-index: 100;
@@ -516,7 +517,7 @@ section.bg {
 		padding: 0;
 	}
 	section {
-		padding: 30px 5px;
+		padding: 50px 5px;
 	}
 	.section-inner {
 		padding: 0 20px;
