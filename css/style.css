@@ -221,6 +221,7 @@ h1 img {
 	padding: 6px 0;
 	background: none;
 	border: none;
+	color: #333;
 	font-size: 1.1rem;
 	font-weight: bold;
 	text-align: left;
@@ -254,7 +255,7 @@ h1 img {
 	display: block;
 }
 .menu div {
-	margin-top: 10px;
+	margin-top: 15px;
 	border-bottom: 1px solid #ccc;
 }
 .menu div li {
@@ -276,7 +277,6 @@ h1 img {
 		position: fixed;
 		bottom: 0;
 		margin: 0;
-		//padding-bottom: env(safe-area-inset-bottom);/*safari使用時にURLバーと色が被らないように*/
 		width: 100%;
 		height: 68px;
 		z-index: 100;
