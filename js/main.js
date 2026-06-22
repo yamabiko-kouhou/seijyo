@@ -1,3 +1,8 @@
+// ヘッダーの読み込み
+fetch("header.html")
+  .then((response) => response.text())
+  .then((data) => document.querySelector("#header").innerHTML = data);
+
 
 // ハンバーガーメニュー
 (function($) {
@@ -52,7 +57,7 @@ $(function() {
 function fitText(el) {
   const maxWidth = el.clientWidth;
 
-  let min = 10;
+  let min = 24;
   let max = 300;
 
   el.style.whiteSpace = 'nowrap';
