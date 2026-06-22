@@ -1,39 +1,41 @@
-// ヘッダーの読み込み
+// ヘッダーの読み込みとハンバーガーメニュー
 fetch("header.html")
-  .then((response) => response.text())
-  .then((data) => document.querySelector("#header").innerHTML = data);
+  .then(response => response.text())
+  .then(data => {
+    document.querySelector("#header").innerHTML = data;
 
+    initHamburger();
+  });
 
-// ハンバーガーメニュー
-(function($) {
-  var $body = $('body'); 
-  var $btn  = $('#nav-btn');
-  var $nav  = $('#header-nav');
-  var open  = 'open';
+function initHamburger() {
 
-  // ハンバーガークリック
+  const $body = $('body');
+  const $btn  = $('#nav-btn');
+  const $nav  = $('#header-nav');
+  const open  = 'open';
+
   $btn.on('click', function(e) {
-    e.stopPropagation(); // ← 外クリックと干渉防止
+    e.stopPropagation();
 
     $body.toggleClass(open);
     $btn.toggleClass('active');
   });
-  // メニュー内クリックは閉じない
+
   $nav.on('click', function(e) {
     e.stopPropagation();
   });
-  // メニュー外クリックで閉じる
+
   $(document).on('click', function() {
     $body.removeClass(open);
     $btn.removeClass('active');
   });
-  // アコーディオン
+
   $('.accordion').on('click', function() {
     $(this).toggleClass('active');
     $(this).next('.submenu').slideToggle();
   });
 
-})(jQuery);
+}
 
 
 
